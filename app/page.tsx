@@ -6,7 +6,6 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-50 dark:bg-black">
       <TrainWithDan />
       <UpcomingDanEvents />
-      <UpcomingDanEvents />
     </main>
   );
 }
