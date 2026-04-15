@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import HubspotTimeTracking from "@/components/HubspotTimeTracking";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <HubspotTimeTracking/>
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/243370621.js"></script>
       </body>
     </html>
