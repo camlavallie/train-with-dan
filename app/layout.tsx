@@ -28,9 +28,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+
+
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/243370621.js"></script>
       </body>
     </html>
   );

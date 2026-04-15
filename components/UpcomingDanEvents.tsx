@@ -6,6 +6,7 @@ type EventItem = {
   description: string
   href: string
   status?: string
+  endsAt: string
 }
 
 const upcomingEvents: EventItem[] = [
@@ -13,35 +14,48 @@ const upcomingEvents: EventItem[] = [
     city: 'Fort Worth, TX',
     venue: 'Lifestyle Christianity',
     date: 'May 8–9, 2026',
-    time: 'Friday, May 8, 2026 8:00 AM - Saturday, May 9, 2026 11:00 PM CDT',
+    time: 'Friday, May 8, 2026 8:00 AM - Saturday, May 9, 2026 11:00 PM CDT',
     description:
       'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
     href: 'https://brushfire.com/lifestylechristianity/pl0526TX/618914/register',
     status: 'Open Registration',
+    endsAt: '2026-05-09T23:00:00-05:00',
   },
   {
     city: 'Adel, GA',
     venue: 'Adel Church of God',
-    date: 'June 26-27, 2026',
-    time: 'Friday, Jun 26, 2026 8:00 AM - Saturday, Jun 27, 2026 11:59 PM EDT',
+    date: 'June 26–27, 2026',
+    time: 'Friday, Jun 26, 2026 8:00 AM - Saturday, Jun 27, 2026 11:59 PM EDT',
     description:
       'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
     href: 'https://brushfire.com/lifestylechristianity/pl26adel/627833/register',
     status: 'Open Registration',
+    endsAt: '2026-06-27T23:59:00-04:00',
   },
   {
     city: 'Fort Worth, TX',
     venue: 'Lifestyle Christianity',
     date: 'Sep 11–12, 2026',
-    time: 'Friday, Sep 11, 2026 8:00 AM - Saturday, Sep 12, 2026 11:00 PM CDT',
+    time: 'Friday, Sep 11, 2026 8:00 AM - Saturday, Sep 12, 2026 11:00 PM CDT',
     description:
       'A regional training event designed to encourage believers in identity, freedom, and everyday ministry.',
     href: 'https://brushfire.com/lifestylechristianity/pl0926TX/618915/tickets',
     status: 'Open Registration',
+    endsAt: '2026-09-12T23:00:00-05:00',
   },
 ]
 
 export default function UpcomingDanEvents() {
+  const now = new Date()
+
+  const visibleEvents = upcomingEvents.filter(
+    (event) => new Date(event.endsAt) >= now
+  )
+
+  if (visibleEvents.length === 0) {
+    return null
+  }
+
   return (
     <section className="bg-[#f5f1ea] py-24 text-neutral-950">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
@@ -63,7 +77,7 @@ export default function UpcomingDanEvents() {
         </div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
-          {upcomingEvents.map((event) => (
+          {visibleEvents.map((event) => (
             <article
               key={`${event.city}-${event.date}`}
               className="flex h-full flex-col rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1"
