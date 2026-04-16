@@ -23,6 +23,7 @@ export default function HubspotTimeTracking() {
       const utmSource = params.get('utm_source') || ''
       const utmMedium = params.get('utm_medium') || ''
       const utmCampaign = params.get('utm_campaign') || ''
+      const utmContent = params.get('utm_content') || ''
 
       if (window._hsq) {
         window._hsq.push([
@@ -36,6 +37,7 @@ export default function HubspotTimeTracking() {
               utm_source: utmSource,
               utm_medium: utmMedium,
               utm_campaign: utmCampaign,
+              utm_content: utmContent,
             },
           },
         ])
