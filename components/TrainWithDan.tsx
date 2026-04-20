@@ -70,7 +70,7 @@ export default function TrainWithDan() {
       <section className="relative isolate min-h-[92svh] overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <div className="absolute inset-0 md:hidden">
-            <Image
+            {/* <Image
               src={dan1}
               alt="Dan Mohler event"
               fill
@@ -78,6 +78,15 @@ export default function TrainWithDan() {
               sizes="100vw"
               className="object-cover object-center opacity-45"
             />
+             */}
+             <Image
+  src={dan1}
+  alt="Dan Mohler event"
+  fill
+  priority
+  sizes="(max-width: 768px) 100vw, 0vw"
+  className="object-cover object-center opacity-45"
+/>
           </div>
 
           <div className="absolute inset-0 hidden md:block">
