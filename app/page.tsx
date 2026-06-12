@@ -1,3 +1,4 @@
+import KindfulDanEmbed from "@/components/KindfulDanEmbed";
 import TrainWithDan from "@/components/TrainWithDan";
 import UpcomingDanEvents from "@/components/UpcomingDanEvents";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-50 dark:bg-black">
       <TrainWithDan />
       <UpcomingDanEvents />
+      <KindfulDanEmbed />
     </main>
   );
 }
