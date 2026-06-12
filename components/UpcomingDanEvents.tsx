@@ -34,7 +34,7 @@ const upcomingEvents: EventItem[] = [
   },
   {
     city: 'Sioux Falls, SD',
-    venue: 'Best Western Plus Ramkota Conference Center',
+    venue: 'Victory Life Church',
     date: 'Sep 4–5, 2026',
     time: 'Friday, Sep 4, 2026 8:00 AM - Saturday, Sep 5, 2026 11:00 PM CDT',
     description:
