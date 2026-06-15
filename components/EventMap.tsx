@@ -54,9 +54,9 @@ export default function EventMap() {
             Train With Dan Mohler
           </p>
 
-          <h2 className="text-4xl font-semibold text-[#2b2118] md:text-5xl">
+          {/* <h2 className="text-4xl font-semibold text-[#2b2118] md:text-5xl">
             Upcoming Events
-          </h2>
+          </h2> */}
 
           <p className="mx-auto mt-4 max-w-2xl text-[#6f5d4b]">
             Join us this year as we travel across the country
