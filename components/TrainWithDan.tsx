@@ -104,17 +104,17 @@ const upcomingEvents: EventItem[] = [
   {
     city: 'Sioux Falls, SD',
     venue: 'Best Western Plus Ramkota Conference Center',
-    date: 'Aug 28–29, 2026',
-    time: 'Friday, Aug 28, 2026 8:00 AM - Saturday, Aug 29, 2026 11:00 PM CDT',
+    date: 'Sep 4-5, 2026',
+    time: 'Friday, Sep 4, 2026 8:00 AM - Saturday, Sep 5, 2026 11:00 PM CDT',
     description:
       'A regional training event focused on identity, freedom, and practical everyday ministry.',
     href: 'https://brushfire.com/lifestylechristianity/pl26siouxfalls/594411/register',
     status: 'Open Registration',
-    startsAt: '2026-08-28T08:00:00-05:00',
-    endsAt: '2026-08-29T23:00:00-05:00',
+    startsAt: '2026-09-04T08:00:00-05:00',
+    endsAt: '2026-08-05T23:00:00-05:00',
     schedule: [
-      { day: 'Friday, Aug 28', items: defaultFridaySchedule },
-      { day: 'Saturday, Aug 29', items: defaultSaturdaySchedule },
+      { day: 'Friday, Sep 4', items: defaultFridaySchedule },
+      { day: 'Saturday, Sep 5', items: defaultSaturdaySchedule },
     ],
   },
   {
