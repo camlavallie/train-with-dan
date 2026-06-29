@@ -87,67 +87,67 @@ export default function UpcomingDanEvents() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
-          {visibleEvents.map((event) => (
-            <article
-              key={`${event.city}-${event.date}`}
-              className="flex h-full flex-col rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-amber-500">
-                    {event.city}
-                  </p>
-                  <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
-                    {event.venue}
-                  </h3>
-                </div>
-
-                {event.status && (
-                  <span className="rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-amber-700">
-                    {event.status}
-                  </span>
-                )}
-              </div>
-
-              <div className="mt-8 space-y-6">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
-                    Date
-                  </p>
-                  <p className="mt-2 text-xl font-semibold text-neutral-950">
-                    {event.date}
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
-                    Time
-                  </p>
-                  <p className="mt-2 text-lg font-medium text-neutral-800">
-                    {event.time}
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
-                    Details
-                  </p>
-                  <p className="mt-2 text-base leading-8 text-neutral-600">
-                    {event.description}
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href={event.href}
-                className="mt-10 inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-neutral-800"
-              >
-                View Event
-              </a>
-            </article>
-          ))}
+        <div className="mt-14 flex flex-wrap justify-center gap-8">
+  {visibleEvents.map((event) => (
+    <article
+      key={`${event.city}-${event.date}`}
+      className="flex h-full w-full max-w-md flex-col rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 lg:w-[calc(33.333%-1.5rem)]"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.22em] text-amber-500">
+            {event.city}
+          </p>
+          <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
+            {event.venue}
+          </h3>
         </div>
+
+        {event.status && (
+          <span className="rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-amber-700">
+            {event.status}
+          </span>
+        )}
+      </div>
+
+      <div className="mt-8 flex-1 space-y-6">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
+            Date
+          </p>
+          <p className="mt-2 text-xl font-semibold text-neutral-950">
+            {event.date}
+          </p>
+        </div>
+
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
+            Time
+          </p>
+          <p className="mt-2 text-lg font-medium text-neutral-800">
+            {event.time}
+          </p>
+        </div>
+
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
+            Details
+          </p>
+          <p className="mt-2 text-base leading-8 text-neutral-600">
+            {event.description}
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={event.href}
+        className="mt-10 inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-neutral-800"
+      >
+        View Event
+      </a>
+    </article>
+  ))}
+</div>
       </div>
     </section>
   )
