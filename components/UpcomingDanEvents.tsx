@@ -58,20 +58,13 @@ const upcomingEvents: EventItem[] = [
 
   city: 'Midland, TX',
 
-  venue: 'Power + Love Midland',
-
+  venue: 'Power + Love Midland', 
+   venue: 'True Lite Christian Fellowship',
   date: 'Oct 16–17, 2026',
-
   time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
-
-  description:
-
-    'A regional training event with Todd White and Dan Mohler focused on identity, freedom, and practical everyday ministry.',
-
+  description:    'A regional training event with Todd White and Dan Mohler focused on identity, freedom, and practical everyday ministry.',
   href: 'https://brushfire.com/lifestylechristianity/pl26midland/634287/register',
-
   status: 'Open Registration',
-
   endsAt: '2026-10-17T23:00:00-05:00',
 
 },
