@@ -58,7 +58,7 @@ const upcomingEvents: EventItem[] = [
 
   city: 'Midland, TX',
 
-  venue: 'Power + Love Midland', 
+
    venue: 'True Lite Christian Fellowship',
   date: 'Oct 16–17, 2026',
   time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
