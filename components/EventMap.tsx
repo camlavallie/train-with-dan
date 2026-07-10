@@ -40,6 +40,13 @@ const events: EventLocation[] = [
     link:
       "https://brushfire.com/lifestylechristianity/pl0926TX/618915/tickets",
   },
+{
+  title: "Midland, TX",
+  date: "October 16–17, 2026",
+  coords: [-102.0779, 31.9973],
+    link:
+      "https://brushfire.com/lifestylechristianity/pl26midland/634287/register",
+  },
 ];
 
 export default function EventMap() {

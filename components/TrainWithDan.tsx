@@ -92,7 +92,7 @@ const upcomingEvents: EventItem[] = [
     time: 'Friday, Jun 26, 2026 8:00 AM - Saturday, Jun 27, 2026 11:59 PM EDT',
     description:
       'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
-    href: 'https://brushfire.com/lifestylechristianity/pl26adel/627833/register',
+    href: 'https://brushfire.com/lifestylechristianity/pl26midland/634287/register',
     status: 'Open Registration',
     startsAt: '2026-06-26T08:00:00-04:00',
     endsAt: '2026-06-27T23:59:00-04:00',

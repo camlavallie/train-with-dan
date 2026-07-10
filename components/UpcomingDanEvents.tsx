@@ -10,28 +10,28 @@ type EventItem = {
 }
 
 const upcomingEvents: EventItem[] = [
-  {
-    city: 'Fort Worth, TX',
-    venue: 'Lifestyle Christianity',
-    date: 'May 8–9, 2026',
-    time: 'Friday, May 8, 2026 8:00 AM - Saturday, May 9, 2026 11:00 PM CDT',
-    description:
-      'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
-    href: 'https://brushfire.com/lifestylechristianity/pl0526TX/618914/register',
-    status: 'Open Registration',
-    endsAt: '2026-05-09T23:00:00-05:00',
-  },
-  {
-    city: 'Adel, GA',
-    venue: 'Adel Church of God',
-    date: 'June 26–27, 2026',
-    time: 'Friday, Jun 26, 2026 8:00 AM - Saturday, Jun 27, 2026 11:59 PM EDT',
-    description:
-      'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
-    href: 'https://brushfire.com/lifestylechristianity/pl26adel/627833/register',
-    status: 'Open Registration',
-    endsAt: '2026-06-27T23:59:00-04:00',
-  },
+  // {
+  //   city: 'Fort Worth, TX',
+  //   venue: 'Lifestyle Christianity',
+  //   date: 'May 8–9, 2026',
+  //   time: 'Friday, May 8, 2026 8:00 AM - Saturday, May 9, 2026 11:00 PM CDT',
+  //   description:
+  //     'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
+  //   href: 'https://brushfire.com/lifestylechristianity/pl0526TX/618914/register',
+  //   status: 'Open Registration',
+  //   endsAt: '2026-05-09T23:00:00-05:00',
+  // },
+  // {
+  // //   city: 'Adel, GA',
+  // //   venue: 'Adel Church of God',
+  // //   date: 'June 26–27, 2026',
+  // //   time: 'Friday, Jun 26, 2026 8:00 AM - Saturday, Jun 27, 2026 11:59 PM EDT',
+  // //   description:
+  // //     'A two-day training focused on identity, freedom, and practical equipping for everyday life with Jesus.',
+  // //   href: 'https://brushfire.com/lifestylechristianity/pl26adel/627833/register',
+  // //   status: 'Open Registration',
+  // //   endsAt: '2026-06-27T23:59:00-04:00',
+  // // },
   {
     city: 'Sioux Falls, SD',
     venue: 'Victory Life Church',
@@ -54,6 +54,27 @@ const upcomingEvents: EventItem[] = [
     status: 'Open Registration',
     endsAt: '2026-09-12T23:00:00-05:00',
   },
+  {
+
+  city: 'Midland, TX',
+
+  venue: 'Power + Love Midland',
+
+  date: 'Oct 16–17, 2026',
+
+  time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
+
+  description:
+
+    'A regional training event with Todd White and Dan Mohler focused on identity, freedom, and practical everyday ministry.',
+
+  href: 'https://brushfire.com/lifestylechristianity/pl26midland/634287/register',
+
+  status: 'Open Registration',
+
+  endsAt: '2026-10-17T23:00:00-05:00',
+
+},
 ]
 
 export default function UpcomingDanEvents() {
@@ -147,7 +168,7 @@ export default function UpcomingDanEvents() {
       </a>
     </article>
   ))}
-</div>
+</div>``
       </div>
     </section>
   )
