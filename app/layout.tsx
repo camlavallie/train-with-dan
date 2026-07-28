@@ -42,6 +42,20 @@ export default function RootLayout({
           src="https://js-na2.hs-scripts.com/243370621.js"
         />
 
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-P311WSEWP8"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-tag" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P311WSEWP8');
+  `}
+</Script>
+
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !(function(f, b, e, v, n, t, s) {

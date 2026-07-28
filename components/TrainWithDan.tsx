@@ -111,7 +111,7 @@ const upcomingEvents: EventItem[] = [
     href: 'https://brushfire.com/lifestylechristianity/pl26siouxfalls/594411/register',
     status: 'Open Registration',
     startsAt: '2026-09-04T08:00:00-05:00',
-    endsAt: '2026-08-05T23:00:00-05:00',
+    endsAt: '2026-09-05T23:00:00-05:00',
     schedule: [
       { day: 'Friday, Sep 4', items: defaultFridaySchedule },
       { day: 'Saturday, Sep 5', items: defaultSaturdaySchedule },
