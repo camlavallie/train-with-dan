@@ -19,33 +19,33 @@ const geoUrl =
   "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 const events: EventLocation[] = [
-  {
-    title: "Adel, GA",
-    date: "June 26–27, 2026",
-    coords: [-83.4235, 31.1373],
-    link:
-      "https://brushfire.com/lifestylechristianity/pl26adel/627833/register",
-  },
-  {
-    title: "Sioux Falls, SD",
-    date: "September 4–5, 2026",
-    coords: [-96.7311, 43.5446],
-    link:
-      "https://brushfire.com/lifestylechristianity/pl26siouxfalls/594411",
-  },
+  // {
+  //   title: "Adel, GA",
+  //   date: "June 26–27, 2026",
+  //   coords: [-83.4235, 31.1373],
+  //   link:
+  //     "https://brushfire.com/lifestylechristianity/pl26adel/627833/register",
+  // },
+  // {
+  //   title: "Sioux Falls, SD",
+  //   date: "September 4–5, 2026",
+  //   coords: [-96.7311, 43.5446],
+  //   link:
+  //     "https://brushfire.com/lifestylechristianity/pl26siouxfalls/594411",
+  // },
   {
     title: "Fort Worth, TX",
     date: "September 11–12, 2026",
     coords: [-97.3308, 32.7555],
     link:
-      "https://brushfire.com/lifestylechristianity/pl0926TX/618915/tickets",
+      "https://www.powerandlove.org/fort-worth-tx-2026",
   },
 {
   title: "Midland, TX",
   date: "October 16–17, 2026",
   coords: [-102.0779, 31.9973],
     link:
-      "https://brushfire.com/lifestylechristianity/pl26midland/634287/register",
+      "https://www.powerandlove.org/midland-tx",
   },
 ];
 

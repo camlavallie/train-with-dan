@@ -32,17 +32,17 @@ const upcomingEvents: EventItem[] = [
   // //   status: 'Open Registration',
   // //   endsAt: '2026-06-27T23:59:00-04:00',
   // // },
-  {
-    city: 'Sioux Falls, SD',
-    venue: 'Victory Life Church',
-    date: 'Sep 4–5, 2026',
-    time: 'Friday, Sep 4, 2026 8:00 AM - Saturday, Sep 5, 2026 11:00 PM CDT',
-    description:
-      'A regional training event focused on identity, freedom, and practical everyday ministry.',
-    href: 'https://lifestylechristianity.brushfire.com/pl26siouxfalls/594411',
-    status: 'Open Registration',
-    endsAt: '2026-09-05T23:00:00-05:00',
-  },
+  // {
+  //   city: 'Sioux Falls, SD',
+  //   venue: 'Victory Life Church',
+  //   date: 'Sep 4–5, 2026',
+  //   time: 'Friday, Sep 4, 2026 8:00 AM - Saturday, Sep 5, 2026 11:00 PM CDT',
+  //   description:
+  //     'A regional training event focused on identity, freedom, and practical everyday ministry.',
+  //   href: 'https://lifestylechristianity.brushfire.com/pl26siouxfalls/594411',
+  //   status: 'Open Registration',
+  //   endsAt: '2026-09-05T23:00:00-05:00',
+  // },
   {
     city: 'Fort Worth, TX',
     venue: 'Lifestyle Christianity Training Center',
@@ -50,7 +50,7 @@ const upcomingEvents: EventItem[] = [
     time: 'Friday, Sep 11, 2026 8:00 AM - Saturday, Sep 12, 2026 11:00 PM CDT',
     description:
       'A regional training event designed to encourage believers in identity, freedom, and everyday ministry.',
-    href: 'https://brushfire.com/lifestylechristianity/pl0926TX/618915/tickets',
+    href: 'https://www.powerandlove.org/fort-worth-tx-2026',
     status: 'Open Registration',
     endsAt: '2026-09-12T23:00:00-05:00',
   },
@@ -59,11 +59,11 @@ const upcomingEvents: EventItem[] = [
   city: 'Midland, TX',
 
 
-   venue: 'True Lite Christian Fellowship',
+   venue: 'Flathead County Fairgrounds',
   date: 'Oct 16–17, 2026',
   time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
   description:    'A regional training event with Todd White and Dan Mohler focused on identity, freedom, and practical everyday ministry.',
-  href: 'https://brushfire.com/lifestylechristianity/pl26midland/634287/register',
+  href: 'https://www.powerandlove.org/midland-tx',
   status: 'Open Registration',
   endsAt: '2026-10-17T23:00:00-05:00',
 
