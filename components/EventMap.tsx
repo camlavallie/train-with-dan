@@ -15,6 +15,11 @@ type EventLocation = {
   link: string;
 };
 
+type MapGeography = {
+  rsmKey: string;
+  [key: string]: unknown;
+};
+
 const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 const EVENTS: EventLocation[] = [
@@ -56,7 +61,11 @@ export default function EventMap() {
             aria-label="Map of upcoming Train With Dan Mohler events"
           >
             <Geographies geography={GEO_URL}>
-              {({ geographies }) =>
+              {({
+                geographies,
+              }: {
+                geographies: MapGeography[];
+              }) =>
                 geographies.map((geo) => (
                   <Geography
                     key={geo.rsmKey}
