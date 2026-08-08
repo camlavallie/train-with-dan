@@ -149,8 +149,8 @@ export default function TrainWithDan() {
           </div>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/35 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/1 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/10" />
 
         <div className="relative mx-auto flex min-h-[92svh] max-w-7xl items-center justify-center px-6 pb-16 pt-28 sm:px-8 lg:px-12">
           <div className="max-w-5xl text-center">
