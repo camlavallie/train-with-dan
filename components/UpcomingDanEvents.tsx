@@ -1,6 +1,8 @@
 type EventItem = {
   city: string
   venue: string
+  address: string
+  cityState: string
   date: string
   time: string
   description: string
@@ -43,23 +45,23 @@ const upcomingEvents: EventItem[] = [
   //   status: 'Open Registration',
   //   endsAt: '2026-09-05T23:00:00-05:00',
   // },
-  {
-    city: 'Fort Worth, TX',
-    venue: 'Lifestyle Christianity Training Center',
-    date: 'Sep 11–12, 2026',
-    time: 'Friday, Sep 11, 2026 8:00 AM - Saturday, Sep 12, 2026 11:00 PM CDT',
-    description:
-      'A regional training event designed to encourage believers in identity, freedom, and everyday ministry.',
-    href: 'https://www.powerandlove.org/fort-worth-tx-2026',
-    status: 'Open Registration',
-    endsAt: '2026-09-12T23:00:00-05:00',
-  },
+  // {
+  //   city: 'Fort Worth, TX',
+  //   venue: 'Lifestyle Christianity Training Center',
+  //   date: 'Sep 11–12, 2026',
+  //   time: 'Friday, Sep 11, 2026 8:00 AM - Saturday, Sep 12, 2026 11:00 PM CDT',
+  //   description:
+  //     'A regional training event designed to encourage believers in identity, freedom, and everyday ministry.',
+  //   href: 'https://www.powerandlove.org/fort-worth-tx-2026',
+  //   status: 'Open Registration',
+  //   endsAt: '2026-09-12T23:00:00-05:00',
+  // },
   {
 
   city: 'Midland, TX',
-
-
-   venue: 'Flathead County Fairgrounds',
+  venue: 'Presence Church',
+  address: '901 N Midland Dr',
+  cityState: 'Midland, Texas 79703',
   date: 'Oct 16–17, 2026',
   time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
   description:    'A regional training event with Todd White and Dan Mohler focused on identity, freedom, and practical everyday ministry.',
@@ -105,7 +107,7 @@ export default function UpcomingDanEvents() {
   {visibleEvents.map((event) => (
     <article
       key={`${event.city}-${event.date}`}
-      className="flex h-full w-full max-w-md flex-col rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 lg:w-[calc(33.333%-1.5rem)]"
+      className={`flex h-full w-full flex-col rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 ${visibleEvents.length === 1 ? 'max-w-2xl' : 'max-w-md lg:w-[calc(33.333%-1.5rem)]'}`}
     >
       <div className="flex items-start justify-between gap-4">
         <div>
@@ -114,6 +116,12 @@ export default function UpcomingDanEvents() {
           </p>
           <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
             {event.venue}
+          </h3>
+          <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
+            {event.address}
+          </h3>
+          <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
+            {event.cityState}
           </h3>
         </div>
 
@@ -161,7 +169,7 @@ export default function UpcomingDanEvents() {
       </a>
     </article>
   ))}
-</div>``
+</div>
       </div>
     </section>
   )

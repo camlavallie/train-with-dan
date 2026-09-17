@@ -87,7 +87,7 @@ const upcomingEvents: EventItem[] = [
   },
   {
     city: 'Midland, TX',
-    venue: 'True-Lite Christian Fellowship',
+    venue: 'Presence Church',
     date: 'Oct 16–17, 2026',
     time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
     description:
