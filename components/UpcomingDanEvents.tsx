@@ -57,8 +57,10 @@ const upcomingEvents: EventItem[] = [
   //   endsAt: '2026-09-12T23:00:00-05:00',
   // },
   {
-    city: 'Fort Worth, TX',
-    venue: 'SENT: With Dan Mohler',
+    city: 'Watauga, TX',
+    venue: 'Lifestyle Christianity University',
+    address: '7200 Denton Highway',
+    cityState: 'Watauga, TX 76148',
     date: 'Dec 1–2, 2026',
     time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 1:00 PM CST',
     description:
