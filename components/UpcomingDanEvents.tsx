@@ -1,4 +1,5 @@
 type EventItem = {
+  name?: string
   city: string
   venue: string
   address?: string
@@ -57,6 +58,7 @@ const upcomingEvents: EventItem[] = [
   //   endsAt: '2026-09-12T23:00:00-05:00',
   // },
   {
+    name: 'SENT: With Dan Mohler',
     city: 'Watauga, TX',
     venue: 'Lifestyle Christianity University',
     address: '7200 Denton Highway',
@@ -114,22 +116,12 @@ export default function UpcomingDanEvents() {
             {event.city}
           </p>
           <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
-            {event.venue}
+            {event.name ?? event.venue}
           </h3>
-          {event.address && (
-            <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
-              {event.address}
-            </h3>
-          )}
-          {event.cityState && (
-            <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
-              {event.cityState}
-            </h3>
-          )}
         </div>
 
         {event.status && (
-          <span className="rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-amber-700">
+          <span className="shrink-0 whitespace-nowrap rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-amber-700">
             {event.status}
           </span>
         )}
@@ -156,10 +148,22 @@ export default function UpcomingDanEvents() {
 
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">
-            Details
+            Location
           </p>
-          <p className="mt-2 text-base leading-8 text-neutral-600">
-            {event.description}
+          <p className="mt-2 text-lg font-medium leading-7 text-neutral-800">
+            {event.venue}
+            {event.address && (
+              <>
+                <br />
+                {event.address}
+              </>
+            )}
+            {event.cityState && (
+              <>
+                <br />
+                {event.cityState}
+              </>
+            )}
           </p>
         </div>
       </div>

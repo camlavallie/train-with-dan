@@ -24,9 +24,9 @@ const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 const EVENTS: EventLocation[] = [
   {
-    title: "Fort Worth, TX",
-    date: "SENT: With Dan Mohler • December 1–2, 2026",
-    coords: [-97.3308, 32.7555],
+    title: "Watauga, TX",
+    date: "SENT: With Dan Mohler • December 1–2, 2026 • Lifestyle Christianity University, 7200 Denton Highway",
+    coords: [-97.2547, 32.8579],
     link: "https://lifestylechristianityu-47789.page451.sites.451.io/",
   },
 ];

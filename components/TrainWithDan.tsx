@@ -90,8 +90,8 @@ const upcomingEvents: EventItem[] = [
   {
     name: 'SENT: With Dan Mohler',
     promo: 'Black Friday Deal: Just $19 (regularly $30)',
-    city: 'Fort Worth, TX',
-    venue: 'Lifestyle Christianity University',
+    city: 'Watauga, TX',
+    venue: 'Lifestyle Christianity University (7200 Denton Highway, Watauga, TX 76148)',
     date: 'Dec 1–2, 2026',
     time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 1:00 PM CST',
     description:
