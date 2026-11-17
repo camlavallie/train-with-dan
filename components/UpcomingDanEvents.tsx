@@ -1,8 +1,8 @@
 type EventItem = {
   city: string
   venue: string
-  address: string
-  cityState: string
+  address?: string
+  cityState?: string
   date: string
   time: string
   description: string
@@ -57,19 +57,16 @@ const upcomingEvents: EventItem[] = [
   //   endsAt: '2026-09-12T23:00:00-05:00',
   // },
   {
-
-  city: 'Midland, TX',
-  venue: 'Presence Church',
-  address: '901 N Midland Dr',
-  cityState: 'Midland, Texas 79703',
-  date: 'Oct 16–17, 2026',
-  time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
-  description:    'A regional training event with Todd White and Dan Mohler focused on identity, freedom, and practical everyday ministry.',
-  href: 'https://www.powerandlove.org/midland-tx',
-  status: 'Open Registration',
-  endsAt: '2026-10-17T23:00:00-05:00',
-
-},
+    city: 'Fort Worth, TX',
+    venue: 'SENT: With Dan Mohler',
+    date: 'Dec 1–2, 2026',
+    time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 1:00 PM CST',
+    description:
+      "BLACK FRIDAY DEAL! Join Dan Mohler for SENT, Dec. 1–2, for just $19 (regularly $30)! Don't miss these two days of powerful teaching, equipping, and training to go out and share the love of Jesus. Register online or in person.",
+    href: 'https://lifestylechristianityu-47789.page451.sites.451.io/',
+    status: 'Black Friday: $19',
+    endsAt: '2026-12-02T13:00:00-06:00',
+  },
 ]
 
 export default function UpcomingDanEvents() {
@@ -117,12 +114,16 @@ export default function UpcomingDanEvents() {
           <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
             {event.venue}
           </h3>
-          <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
-            {event.address}
-          </h3>
-          <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
-            {event.cityState}
-          </h3>
+          {event.address && (
+            <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
+              {event.address}
+            </h3>
+          )}
+          {event.cityState && (
+            <h3 className="mt-3 text-3xl font-bold leading-tight text-neutral-950">
+              {event.cityState}
+            </h3>
+          )}
         </div>
 
         {event.status && (
@@ -165,7 +166,7 @@ export default function UpcomingDanEvents() {
         href={event.href}
         className="mt-10 inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-neutral-800"
       >
-        View Event
+        Register Now
       </a>
     </article>
   ))}

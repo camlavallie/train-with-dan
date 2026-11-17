@@ -20,6 +20,8 @@ type ScheduleDay = {
 }
 
 type EventItem = {
+  name?: string
+  promo?: string
   city: string
   venue: string
   date: string
@@ -86,19 +88,27 @@ const upcomingEvents: EventItem[] = [
     ],
   },
   {
-    city: 'Midland, TX',
-    venue: 'Presence Church',
-    date: 'Oct 16–17, 2026',
-    time: 'Friday, Oct 16, 2026 8:00 AM - Saturday, Oct 17, 2026 11:00 PM CDT',
+    name: 'SENT: With Dan Mohler',
+    promo: 'Black Friday Deal: Just $19 (regularly $30)',
+    city: 'Fort Worth, TX',
+    venue: 'Lifestyle Christianity University',
+    date: 'Dec 1–2, 2026',
+    time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 1:00 PM CST',
     description:
-      'A regional training event designed to encourage believers in identity, freedom, and everyday ministry.',
-    href: 'https://www.powerandlove.org/midland-tx',
+      "Don't miss these two days of powerful teaching, equipping, and training to go out and share the love of Jesus.",
+    href: 'https://lifestylechristianityu-47789.page451.sites.451.io/',
     status: 'Open Registration',
-    startsAt: '2026-10-16T08:00:00-05:00',
-    endsAt: '2026-10-17T23:00:00-05:00',
+    startsAt: '2026-12-01T08:00:00-06:00',
+    endsAt: '2026-12-02T13:00:00-06:00',
     schedule: [
-      { day: 'Friday, Oct 16', items: defaultFridaySchedule },
-      { day: 'Saturday, Oct 17', items: defaultSaturdaySchedule },
+      {
+        day: 'Tuesday, Dec 1',
+        items: [{ time: '8:00 AM', title: 'Doors Open' }],
+      },
+      {
+        day: 'Wednesday, Dec 2',
+        items: [{ time: '1:00 PM', title: 'Event Concludes' }],
+      },
     ],
   },
 ]
@@ -164,10 +174,26 @@ export default function TrainWithDan() {
               Dan Mohler
             </h1>
 
+            {activeEvent.promo && (
+              <p className="mx-auto mt-6 inline-flex rounded-full bg-amber-300 px-5 py-2 text-xs font-black uppercase tracking-[0.2em] text-black sm:text-sm">
+                {activeEvent.promo}
+              </p>
+            )}
+
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8 lg:text-xl">
-              Freedom and knowing who you are in Christ is just the beginning.
-              Join us in {activeEvent.city} for a weekend of worship, identity,
-              practical teaching, and activation for everyday life with Jesus.
+              {activeEvent.name ? (
+                <>
+                  Join Dan Mohler for {activeEvent.name}, {activeEvent.date}, in{' '}
+                  {activeEvent.city}. {activeEvent.description}
+                </>
+              ) : (
+                <>
+                  Freedom and knowing who you are in Christ is just the
+                  beginning. Join us in {activeEvent.city} for two days of
+                  worship, identity, practical teaching, and activation for
+                  everyday life with Jesus.
+                </>
+              )}
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -175,7 +201,7 @@ export default function TrainWithDan() {
                 href={activeEvent.href}
                 className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-bold uppercase tracking-[0.18em] text-black transition hover:bg-neutral-200"
               >
-                Buy Tickets
+                Register Now
               </a>
               <a
                 href="#event-info"
@@ -238,7 +264,7 @@ export default function TrainWithDan() {
             <h2 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl lg:text-6xl">
               A life-giving
               <br />
-              training weekend
+              training event
             </h2>
 
             <div className="mt-8 space-y-5 text-base leading-7 text-white/72 sm:text-lg sm:leading-8">
@@ -248,8 +274,9 @@ export default function TrainWithDan() {
                 worship.
               </p>
               <p>
-                Join us at {activeEvent.venue} in {activeEvent.city} on{' '}
-                {activeEvent.date}.
+                Join us{activeEvent.name ? <> for {activeEvent.name}</> : null} at{' '}
+                {activeEvent.venue} in {activeEvent.city} on {activeEvent.date}.
+                {activeEvent.promo ? <> {activeEvent.promo}. Register online or in person.</> : null}
               </p>
               <p>
                 Come ready to be refreshed, challenged, and called higher in
@@ -300,7 +327,7 @@ export default function TrainWithDan() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {activeEvent.schedule.map((group) => (
+          {activeEvent.schedule.map((group, groupIndex) => (
             <div
               key={group.day}
               className="rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] backdrop-blur-sm sm:p-7"
@@ -310,7 +337,7 @@ export default function TrainWithDan() {
                   {group.day}
                 </p>
                 <h3 className="mt-3 text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">
-                  {group.day.includes('Friday') ? 'Day One' : 'Day Two'}
+                  {groupIndex === 0 ? 'Day One' : 'Day Two'}
                 </h3>
               </div>
 
@@ -396,7 +423,7 @@ export default function TrainWithDan() {
             href={activeEvent.href}
             className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-bold uppercase tracking-[0.18em] text-black transition hover:bg-neutral-200"
           >
-            Buy Tickets
+            Register Now
           </a>
           <a
             href="#event-info"

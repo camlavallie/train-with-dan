@@ -25,15 +25,9 @@ const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 const EVENTS: EventLocation[] = [
   {
     title: "Fort Worth, TX",
-    date: "September 11–12, 2026",
+    date: "SENT: With Dan Mohler • December 1–2, 2026",
     coords: [-97.3308, 32.7555],
-    link: "https://www.powerandlove.org/fort-worth-tx-2026",
-  },
-  {
-    title: "Midland, TX",
-    date: "October 16–17, 2026",
-    coords: [-102.0779, 31.9973],
-    link: "https://www.powerandlove.org/midland-tx",
+    link: "https://lifestylechristianityu-47789.page451.sites.451.io/",
   },
 ];
 
@@ -138,7 +132,7 @@ export default function EventMap() {
               </button>
 
               <p className="mb-2 text-xs uppercase tracking-[0.2em] text-[#9a7d56]">
-                Power + Love Event
+                Upcoming Event
               </p>
               <h3 className="text-2xl font-semibold text-[#2b2118]">
                 {activeEvent.title}
@@ -151,7 +145,7 @@ export default function EventMap() {
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center rounded-full bg-[#b45309] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#92400e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b45309]"
               >
-                View Event
+                Register Now
               </a>
             </div>
           )}
