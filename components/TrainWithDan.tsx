@@ -22,6 +22,10 @@ type ScheduleDay = {
 type EventItem = {
   name?: string
   promo?: string
+  eyebrow?: string
+  heroCopy?: string
+  aboutCopy?: string
+  scheduleNote?: string
   city: string
   venue: string
   date: string
@@ -90,27 +94,51 @@ const upcomingEvents: EventItem[] = [
   {
     name: 'SENT: With Dan Mohler',
     promo: 'Black Friday Deal: Just $19 (regularly $30)',
+    eyebrow: 'Dec 1–2 • Lifestyle Christianity University • Open to the Public',
+    heroCopy:
+      "SENT: With Dan Mohler is a university event that's open to the public, not a conference. Join Lifestyle Christianity University students for two days of teaching at our Dallas-Fort Worth training center.",
+    aboutCopy:
+      "Join us for SENT: With Dan Mohler at Lifestyle Christianity University, our Dallas-Fort Worth training center (7200 Denton Highway, Watauga, TX 76148), on Dec 1–2, 2026. You'll be joining our students for two days of class. Black Friday Deal: Just $19 (regularly $30). Attend in person or online.",
+    scheduleNote:
+      'Doors open at 8:00 AM both days. Please arrive by 9:00 AM. Doors close when teaching begins at 9:15 AM. Schedule subject to change.',
     city: 'Watauga, TX',
     venue: 'Lifestyle Christianity University (7200 Denton Highway, Watauga, TX 76148)',
     date: 'Dec 1–2, 2026',
-    time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 1:00 PM CST',
+    time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 CST',
     description:
       "Don't miss these two days of powerful teaching, equipping, and training to go out and share the love of Jesus.",
-    href: 'https://lifestylechristianityu-47789.page451.sites.451.io/',
+    href: 'https://lifestylechristianity.ticketspice.com/sent-with-dan-mohler',
     status: 'Open Registration',
     startsAt: '2026-12-01T08:00:00-06:00',
-    endsAt: '2026-12-02T13:00:00-06:00',
+    endsAt: '2026-12-02T23:00:00-06:00',
     schedule: [
       {
         day: 'Tuesday, Dec 1',
-        items: [{ time: '8:00 AM', title: 'Doors Open' }],
+        items: [
+          { time: '8:00 AM', title: 'Doors Open' },
+          { time: '8:30 AM', title: 'Worship' },
+          { time: '9:15 AM', title: 'Session 1 with Dan Mohler' },
+          { time: '11:00 AM', title: 'Love in Action' },
+          { time: '6:30 PM', title: 'Encounter Night' },
+        ],
       },
       {
         day: 'Wednesday, Dec 2',
-        items: [{ time: '1:00 PM', title: 'Event Concludes' }],
+        items: [
+          { time: '8:00 AM', title: 'Doors Open' },
+          { time: '8:30 AM', title: 'Worship' },
+          { time: '9:15 AM', title: 'Session 2 with Todd White' },
+          { time: '11:00 AM', title: 'Lunch & Presentation' },
+          { time: '1:30 PM', title: 'Worship Academy (Optional)' },
+        ],
       },
     ],
   },
+]
+
+const beforeYouCome = [
+  'Guests must be 18+. Prospective students who are 16 or 17 must attend with a parent or guardian.',
+  'Children under 16 are not permitted on campus.',
 ]
 
 const galleryImages: StaticImageData[] = [dan1, dan3, dan4, dan5, dan6, dan7]
@@ -165,7 +193,7 @@ export default function TrainWithDan() {
         <div className="relative mx-auto flex min-h-[92svh] max-w-7xl items-center justify-center px-6 pb-16 pt-28 sm:px-8 lg:px-12">
           <div className="max-w-5xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-300/90 sm:text-xs">
-              {activeEvent.city} • Two-Day Training Event
+              {activeEvent.eyebrow ?? <>{activeEvent.city} • Two-Day Training Event</>}
             </p>
 
             <h1 className="mt-6 text-5xl font-black uppercase leading-[0.9] tracking-tight text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl xl:text-[5.75rem]">
@@ -181,7 +209,9 @@ export default function TrainWithDan() {
             )}
 
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8 lg:text-xl">
-              {activeEvent.name ? (
+              {activeEvent.heroCopy ? (
+                activeEvent.heroCopy
+              ) : activeEvent.name ? (
                 <>
                   Join Dan Mohler for {activeEvent.name}, {activeEvent.date}, in{' '}
                   {activeEvent.city}. {activeEvent.description}
@@ -273,11 +303,15 @@ export default function TrainWithDan() {
                 awaken, and equip believers through Christ-centered teaching and
                 worship.
               </p>
+              {activeEvent.aboutCopy ? (
+                <p>{activeEvent.aboutCopy}</p>
+              ) : (
               <p>
                 Join us{activeEvent.name ? <> for {activeEvent.name}</> : null} at{' '}
                 {activeEvent.venue} in {activeEvent.city} on {activeEvent.date}.
                 {activeEvent.promo ? <> {activeEvent.promo}. Register online or in person.</> : null}
               </p>
+              )}
               <p>
                 Come ready to be refreshed, challenged, and called higher in
                 your walk with Jesus.
@@ -324,6 +358,11 @@ export default function TrainWithDan() {
             A simple rhythm of worship, teaching, and response across two days
             in {activeEvent.city}.
           </p>
+          {activeEvent.scheduleNote && (
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/55 sm:text-base">
+              {activeEvent.scheduleNote}
+            </p>
+          )}
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
@@ -361,6 +400,35 @@ export default function TrainWithDan() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl rounded-[2rem] border border-amber-300/25 bg-amber-300/[0.06] p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-300/90">
+            Before You Come
+          </p>
+          <ul className="mt-5 space-y-3 text-base leading-7 text-white/80 sm:text-lg">
+            {beforeYouCome.map((note) => (
+              <li key={note} className="flex gap-3">
+                <span aria-hidden="true" className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300" />
+                <span>{note}</span>
+              </li>
+            ))}
+            <li className="flex gap-3">
+              <span aria-hidden="true" className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300" />
+              <span>
+                Read our{' '}
+                <a
+                  href="https://go.lifestylechristianity.com/guest_guidelines"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-amber-300 underline underline-offset-4 hover:text-amber-200"
+                >
+                  Guest Guidelines
+                </a>
+                .
+              </span>
+            </li>
+          </ul>
         </div>
       </section>
 

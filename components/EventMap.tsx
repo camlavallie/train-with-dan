@@ -27,7 +27,7 @@ const EVENTS: EventLocation[] = [
     title: "Watauga, TX",
     date: "SENT: With Dan Mohler • December 1–2, 2026 • Lifestyle Christianity University, 7200 Denton Highway",
     coords: [-97.2547, 32.8579],
-    link: "https://lifestylechristianityu-47789.page451.sites.451.io/",
+    link: "https://lifestylechristianity.ticketspice.com/sent-with-dan-mohler",
   },
 ];
 

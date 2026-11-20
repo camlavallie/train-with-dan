@@ -67,9 +67,9 @@ const upcomingEvents: EventItem[] = [
     time: 'Tuesday, Dec 1, 2026 8:00 AM - Wednesday, Dec 2, 2026 1:00 PM CST',
     description:
       "BLACK FRIDAY DEAL! Join Dan Mohler for SENT, Dec. 1–2, for just $19 (regularly $30)! Don't miss these two days of powerful teaching, equipping, and training to go out and share the love of Jesus. Register online or in person.",
-    href: 'https://lifestylechristianityu-47789.page451.sites.451.io/',
+    href: 'https://lifestylechristianity.ticketspice.com/sent-with-dan-mohler',
     status: 'Black Friday: $19',
-    endsAt: '2026-12-02T13:00:00-06:00',
+    endsAt: '2026-12-02T23:00:00-06:00',
   },
 ]
 
